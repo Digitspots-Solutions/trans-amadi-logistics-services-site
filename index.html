@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trans Amadi Logistics Services - Moving Nigeria's Industries Forward</title>
+    <meta name="description" content="Nigeria's trusted industrial haulage partner. Heavy equipment transportation, petroleum logistics, and bulk cargo movement across all 36 states.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1E293B;
+            --color-accent: #DC2626;
+            --color-bg: #FFFFFF;
+            --color-text: #0F172A;
+            --color-surface: #F1F5F9;
+            --font-display: 'Barlow Condensed', serif;
+            --font-body: 'Inter', sans-serif;
+            --radius: 4px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.8s ease-out forwards;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--color-accent);
+        }
+
+        .nav-links {
+            display: none;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            background: var(--color-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+        }
+
+        .btn:hover {
+            background: #B91C1C;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-primary);
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background: white;
+            padding: 6rem 2rem 2rem;
+            transition: right 0.3s;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-menu a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(30, 41, 59, 0.85)), url('https://images.pexels.com/photos/13734379/pexels-photo-13734379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 48px 5%;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            opacity: 0.95;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-accent);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 5%;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #64748B;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            border: 1px solid #E2E8F0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--color-surface);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #64748B;
+            line-height: 1.7;
+        }
+
+        /* Why Us Section */
+        .why-us-section {
+            background: var(--color-surface);
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .why-us-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+
+        .why-us-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .why-us-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--color-accent), #B91C1C);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .why-us-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .why-us-card p {
+            color: #64748B;
+            line-height: 1.8;
+        }
+
+        /* Fleet Section */
+        .fleet-section {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .fleet-section .section-title {
+            color: white;
+        }
+
+        .fleet-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .fleet-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: var(--radius);
+            transition: all 0.3s;
+        }
+
+        .fleet-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .fleet-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: var(--color-accent);
+        }
+
+        .fleet-card p {
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        /* Industries Section */
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .industry-card {
+            position: relative;
+            height: 350px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .industry-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .industry-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .industry-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(30, 41, 59, 0.95), transparent);
+            padding: 2rem;
+            color: white;
+        }
+
+        .industry-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Safety Section */
+        .safety-section {
+            background: var(--color-surface);
+        }
+
+        .safety-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .safety-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .safety-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            loading: lazy;
+        }
+
+        .safety-text h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .safety-text p {
+            color: #64748B;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .safety-badges {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .badge {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            color: var(--color-primary);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid var(--color-accent);
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--color-surface);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--color-accent);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote-mark {
+            font-size: 3rem;
+            color: var(--color-accent);
+            line-height: 1;
+            margin-bottom: 1rem;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            color: var(--color-text);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .testimonial-position {
+            color: #64748B;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-primary), #0F172A);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section .section-title {
+            color: white;
+        }
+
+        .cta-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--color-surface);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-info h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--color-surface);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        .contact-item p {
+            color: #64748B;
+            line-height: 1.6;
+        }
+
+        .contact-item strong {
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #E2E8F0;
+            border-radius: var(--radius);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-primary);
+            color: white;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-section h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--color-accent);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 2rem auto 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s;
+            text-decoration: none;
+            font-size: 2rem;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+
+            .hero h1 {
+                font-size: 4rem;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero {
+                min-height: 70vh;
+                background-attachment: scroll;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 48px 5%;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .stat-value {
+                font-size: 2rem;
+            }
+
+            .safety-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .safety-image img {
+                height: 300px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">TRANS <span>AMADI</span></div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#fleet">Fleet</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#safety">Safety</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact" class="btn">Request Quote</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+            <li><a href="#fleet" onclick="toggleMenu()">Fleet</a></li>
+            <li><a href="#industries" onclick="toggleMenu()">Industries</a></li>
+            <li><a href="#safety" onclick="toggleMenu()">Safety</a></li>
+            <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero fade-up">
+        <div class="hero-content">
+            <h1>Nigeria's Trusted Industrial Haulage Partner</h1>
+            <p>From Port Harcourt's industrial heartland, we deliver heavy-duty logistics solutions across the nation. With over 15 years moving petroleum equipment, machinery, and bulk cargo, Trans Amadi Logistics Services ensures your industrial operations never stop. Our fleet of specialized trucks and experienced drivers guarantee safe, timely delivery—every single time.</p>
+            <div class="hero-cta">
+                <a href="#services" class="btn">Our Services</a>
+                <a href="#contact" class="btn btn-secondary">Get Quote</a>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-value">15+</span>
+                    <span class="stat-label">Years in Operation</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">5,000+</span>
+                    <span class="stat-label">Successful Hauls</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">30+</span>
+                    <span class="stat-label">Fleet Vehicles</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">98.7%</span>
+                    <span class="stat-label">On-Time Delivery Rate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive logistics solutions engineered for Nigeria's industrial sector</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚛</div>
+                    <h3>Heavy Equipment Haulage</h3>
+                    <p>Specialized lowbed trailers for oversized cargo up to 60 tonnes. We move machinery, transformers, and industrial equipment others won't touch.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⛽</div>
+                    <h3>Petroleum Transportation</h3>
+                    <p>DPR-certified tankers for safe petroleum product delivery. 33,000-liter capacity with hazmat-trained drivers and full compliance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏭</div>
+                    <h3>Industrial Machinery Relocation</h3>
+                    <p>Factory equipment installation and relocation services. GPS-tracked transport with expert rigging and positioning teams.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3>Bulk Cargo Movement</h3>
+                    <p>High-volume cargo transport for agricultural produce, construction materials, and raw industrial inputs across all 36 states.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Warehousing Solutions</h3>
+                    <p>Secure Trans-Amadi warehouse facilities with 24/7 security, climate control options, and inventory management systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Emergency Logistics</h3>
+                    <p>24/7 rapid response for urgent industrial deliveries. We've completed critical hauls in 36-48 hours during emergency operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us-section fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Us</h2>
+                <p class="section-subtitle">Built on the foundation of Trans-Amadi Industrial Layout—Nigeria's manufacturing hub</p>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-us-card">
+                    <div class="why-us-icon">🎯</div>
+                    <h3>Industrial Expertise</h3>
+                    <p>Over 15 years serving Nigeria's oil and gas, manufacturing, and construction sectors. We understand industrial timelines and the critical nature of heavy equipment delivery.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="why-us-icon">🚚</div>
+                    <h3>Specialized Fleet</h3>
+                    <p>30+ modern vehicles including lowbed trailers, flatbeds, petroleum tankers, and pilot escort vehicles. Weekly maintenance ensures zero downtime.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="why-us-icon">🔒</div>
+                    <h3>Comprehensive Insurance</h3>
+                    <p>Full cargo coverage up to ₦500 million with third-party liability protection. Your equipment is secured from pickup to final delivery.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="why-us-icon">📍</div>
+                    <h3>Port Harcourt Advantage</h3>
+                    <p>Direct access to Port Harcourt ports for import/export coordination. Strategic location in Trans-Amadi Industrial Layout for rapid dispatch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="fleet-section fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Fleet</h2>
+                <p class="section-subtitle">Equipped to Handle Nigeria's Toughest Hauls</p>
+            </div>
+            <div class="fleet-grid">
+                <div class="fleet-card">
+                    <h3>Lowbed Trailers (12 Units)</h3>
+                    <p>40-60 tonne capacity specialized trailers for oversized industrial equipment, transformers, generators, and heavy machinery transport.</p>
+                </div>
+                <div class="fleet-card">
+                    <h3>Flatbed Trucks (8 Units)</h3>
+                    <p>Standard industrial cargo transport for palletized goods, steel products, construction materials, and general heavy-duty freight.</p>
+                </div>
+                <div class="fleet-card">
+                    <h3>Covered Trucks (6 Units)</h3>
+                    <p>Weather-protected cargo space for sensitive equipment, electronics, and materials requiring environmental protection during transit.</p>
+                </div>
+                <div class="fleet-card">
+                    <h3>Petroleum Tankers (4 Units)</h3>
+                    <p>DPR-certified 33,000-liter capacity tankers with fire suppression systems for safe petroleum product transportation nationwide.</p>
+                </div>
+                <div class="fleet-card">
+                    <h3>Pilot Escort Vehicles</h3>
+                    <p>Dedicated escort vehicles for oversized loads ensuring safe passage and FRSC compliance on Nigerian highways.</p>
+                </div>
+                <div class="fleet-card">
+                    <h3>GPS & Tech Systems</h3>
+                    <p>Every vehicle equipped with real-time GPS tracking, electronic logging devices, and 24/7 dispatch communication systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Served -->
+    <section id="industries" class="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Industries We Serve</h2>
+                <p class="section-subtitle">Powering Nigeria's Economic Engine</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <img src="https://images.pexels.com/photos/237836/pexels-photo-237836.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Oil and Gas Industry" loading="lazy">
+                    <div class="industry-overlay">
+                        <h3>Oil & Gas</h3>
+                        <p>Equipment to offshore platforms, flow stations, and drilling sites across the Niger Delta region.</p>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <img src="https://images.pexels.com/photos/257636/pexels-photo-257636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Manufacturing Plants" loading="lazy">
+                    <div class="industry-overlay">
+                        <h3>Manufacturing</h3>
+                        <p>Factory machinery installation, raw material supply, and finished goods distribution nationwide.</p>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <img src="https://images.pexels.com/photos/12396171/pexels-photo-12396171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Construction Sites" loading="lazy">
+                    <div class="industry-overlay">
+                        <h3>Construction</h3>
+                        <p>Heavy equipment, building materials, and project cargo to construction sites across Nigeria.</p>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <img src="https://images.pexels.com/photos/7564857/pexels-photo-7564857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Power Generation" loading="lazy">
+                    <div class="industry-overlay">
+                        <h3>Power Generation</h3>
+                        <p>Transformer and turbine transportation for power projects and electrical infrastructure development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety & Compliance -->
+    <section id="safety" class="safety-section fade-up">
+        <div class="container">
+            <div class="safety-content">
+                <div class="safety-image">
+                    <img src="https://images.pexels.com/photos/7564857/pexels-photo-7564857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Safety Compliance" loading="lazy">
+                </div>
+                <div class="safety-text">
+                    <h2>Safety & Compliance</h2>
+                    <p>Trans Amadi Logistics Services maintains full compliance with Nigerian safety regulations and international logistics standards. Our drivers complete monthly safety training, all trucks carry fire suppression systems and emergency kits, and loads are secured per FRSC guidelines with certified tie-downs.</p>
+                    <p>We maintain DPR certification for petroleum product haulage and comprehensive third-party liability insurance. Our safety record speaks volumes: zero fatalities since 2015, FIRS-compliant tax documentation, and we don't just meet standards—we set them for Rivers State logistics operations.</p>
+                    <div class="safety-badges">
+                        <div class="badge">NAFDAC Certified</div>
+                        <div class="badge">SON Approved</div>
+                        <div class="badge">NARTO Member</div>
+                        <div class="badge">DPR Licensed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials-section fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">Trusted by Nigeria's leading industrial companies</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Trans Amadi moved our 35-tonne reactor from Port Harcourt to our Aba facility without incident. Their planning and execution were flawless.</p>
+                    <p class="testimonial-author">Chief Engineer</p>
+                    <p class="testimonial-position">ChemWorks Nigeria Ltd</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">For five years, they've transported our petroleum products across the South-South. Always on time, always professional.</p>
+                    <p class="testimonial-author">Operations Manager</p>
+                    <p class="testimonial-position">Delta Oil Services</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">When we needed emergency equipment delivery to our Bonny Island platform, Trans Amadi delivered in 36 hours during rainy season. Exceptional service.</p>
+                    <p class="testimonial-author">Project Lead</p>
+                    <p class="testimonial-position">International Energy Corp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section fade-up">
+        <div class="container">
+            <h2 class="section-title">Ready to Move Your Cargo?</h2>
+            <p class="section-subtitle">Contact Trans Amadi Logistics Services today for a comprehensive quote. Whether it's a single haul or long-term logistics partnership, our team provides detailed cost estimates within 24 hours. We offer competitive rates, flexible payment terms for corporate clients, and customized solutions for recurring industrial transport needs.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn">Get Quote Now</a>
+                <a href="https://wa.me/2348031234587" class="btn btn-secondary">WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Get in touch for quotes and inquiries</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Our Office</strong>
+                            <p>Plot 5 Trans-Amadi Industrial Layout, Port Harcourt, Rivers State, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+234 803 123 4587</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <strong>Email</strong>
+                            <p>info@trans-amadi-logistics-services.ng</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div>
+                            <strong>Business Hours</strong>
+                            <p>Monday - Saturday: 7:00 AM - 7:00 PM<br>24/7 Emergency Dispatch Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" placeholder="Your company">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" required placeholder="+234 xxx xxx xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Cargo Details *</label>
+                            <textarea required placeholder="Please describe your cargo, weight, dimensions, pickup and delivery locations..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Submit Quote Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TRANS AMADI LOGISTICS</h3>
+                <p>Moving Nigeria's Industries Forward Since 2008. Licensed by Rivers State Ministry of Transport. Member, Nigerian Association of Road Transport Owners (NARTO).</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#services">Our Services</a>
+                <a href="#fleet">Our Fleet</a>
+                <a href="#industries">Industries Served</a>
+                <a href="#safety">Safety Standards</a>
+                <a href="#contact">Get Quote</a>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <a href="#services">Heavy Equipment Haulage</a>
+                <a href="#services">Petroleum Transportation</a>
+                <a href="#services">Industrial Machinery Relocation</a>
+                <a href="#services">Bulk Cargo Movement</a>
+                <a href="#services">Warehousing Solutions</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><strong>Address:</strong><br>Plot 5 Trans-Amadi Industrial Layout<br>Port Harcourt, Rivers State<br>Obio/Akpor, Nigeria</p>
+                <p><strong>Phone:</strong> +234 803 123 4587</p>
+                <p><strong>Email:</strong> info@trans-amadi-logistics-services.ng</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Trans Amadi Logistics Services · All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2348031234587" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        💬
+    </a>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your quote request! We will contact you within 24 hours.');
+            this.reset();
+        });
+
+        // Add fade-up animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
